@@ -107,13 +107,15 @@ var Phaser = {
         XHRLoader: require('loader/XHRLoader'),
         XHRSettings: require('loader/XHRSettings')
     },
-    Math: {
-        Between: require('math/Between'),
-        DegToRad: require('math/DegToRad'),
-        FloatBetween: require('math/FloatBetween'),
-        RadToDeg: require('math/RadToDeg'),
-        Vector2: require('math/Vector2')
-    },
+    Math: require('math'),
+    // Math: {
+    //     Between: require('math/Between'),
+    //     DegToRad: require('math/DegToRad'),
+    //     FloatBetween: require('math/FloatBetween'),
+    //     RadToDeg: require('math/RadToDeg'),
+    //     Vector2: require('math/Vector2'),
+    //     RandomDataGenerator: require('math/random-data-generator/RandomDataGenerator'), // 添加随机数生成
+    // },
     Plugins: require('plugins'),
     Renderer: require('renderer'),
     Scale: require('scale'),

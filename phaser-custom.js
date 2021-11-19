@@ -18,15 +18,17 @@ var Phaser = {
     Animations: require('animations'),
     BlendModes: require('renderer/BlendModes'),
     Cache: require('cache'),
-    Cameras: { Scene2D: require('cameras/2d') },
+    Cameras: {Scene2D: require('cameras/2d')},
     Core: require('core'),
     Class: require('utils/Class'),
     Data: require('data'),
-    Display: { Masks: require('display/mask') },
+    Display: {Masks: require('display/mask')},
     DOM: require('dom'),
     Events: require('events/EventEmitter'),
     Game: require('core/Game'),
+    // GameObjects: require('gameobjects'),
     GameObjects: {
+        Events: require('gameobjects/events'), // 添加所有gameobject中的events
         DisplayList: require('gameobjects/DisplayList'),
         GameObjectCreator: require('gameobjects/GameObjectCreator'),
         GameObjectFactory: require('gameobjects/GameObjectFactory'),
@@ -38,25 +40,47 @@ var Phaser = {
         Graphics: require('gameobjects/graphics/Graphics.js'),
         Image: require('gameobjects/image/Image'),
         Layer: require('gameobjects/layer/Layer'),
+        Particles: require('gameobjects/particles'), // 添加粒子系统
         Sprite: require('gameobjects/sprite/Sprite'),
         Text: require('gameobjects/text/Text'),
+        BitmapText: require('gameobjects/bitmaptext/static/BitmapText'), // 添加BitmapText
+        DynamicBitmapText: require("gameobjects/bitmaptext/dynamic/DynamicBitmapText"), // 添加DynamicBitmapText
         Factories: {
             Graphics: require('gameobjects/graphics/GraphicsFactory'),
             Image: require('gameobjects/image/ImageFactory'),
             Layer: require('gameobjects/layer/LayerFactory'),
+            Particles: require('gameobjects/particles/ParticleManagerFactory'), // 添加粒子系统
             Sprite: require('gameobjects/sprite/SpriteFactory'),
-            Text: require('gameobjects/text/TextFactory')
+            Text: require('gameobjects/text/TextFactory'),
+            BitmapText: require('gameobjects/bitmaptext/static/BitmapTextFactory'), // 添加BitmapTextFactory
+            DynamicBitmapText: require("gameobjects/bitmaptext/dynamic/DynamicBitmapTextFactory"), // 添加DynamicBitmapTextFactory
         },
         Creators: {
             Graphics: require('gameobjects/graphics/GraphicsCreator'),
             Image: require('gameobjects/image/ImageCreator'),
             Layer: require('gameobjects/layer/LayerCreator'),
+            Particles: require('gameobjects/particles/ParticleManagerCreator'), // 添加粒子系统
             Sprite: require('gameobjects/sprite/SpriteCreator'),
-            Text: require('gameobjects/text/TextCreator')
+            Text: require('gameobjects/text/TextCreator'),
+            BitmapText: require('gameobjects/bitmaptext/static/BitmapTextCreator'), // 添加BitmapTextCreator
+            DynamicBitmapText: require("gameobjects/bitmaptext/dynamic/DynamicBitmapTextCreator"), // 添加DynamicBitmapTextCreator
         }
+    },
+    Geom: {
+        // Circle: require('geom/circle'),
+        // Ellipse: require('geom/ellipse'),
+        // Intersects: require('geom/intersects'),
+        Line: require('geom/line'),
+        // Mesh: require('geom/mesh'),
+        // Point: require('geom/point'),
+        // Polygon: require('geom/polygon'),
+        Rectangle: require('geom/rectangle'),
+        Triangle: require('geom/triangle')
+
     },
     Input: require('input'),
     Loader: {
+        Events: require("loader/events"), // 把所有的事件导入
         FileTypes: {
             AnimationJSONFile: require('loader/filetypes/AnimationJSONFile'),
             AtlasJSONFile: require('loader/filetypes/AtlasJSONFile'),
@@ -70,7 +94,9 @@ var Phaser = {
             ScriptFile: require('loader/filetypes/ScriptFile'),
             SpriteSheetFile: require('loader/filetypes/SpriteSheetFile'),
             TextFile: require('loader/filetypes/TextFile'),
-            XMLFile: require('loader/filetypes/XMLFile')
+            XMLFile: require('loader/filetypes/XMLFile'),
+            PackFile: require("loader/filetypes/PackFile"), // 添加load.pack
+            BitmapFontFile: require('loader/filetypes/BitmapFontFile'), // 添加BitmapFont
         },
         File: require('loader/File'),
         FileTypesManager: require('loader/FileTypesManager'),
@@ -102,8 +128,7 @@ var Phaser = {
 
 //   Merge in the consts//  Merge in the optional plugins and WebGL only features
 
-if (typeof FEATURE_SOUND)
-{
+if (typeof FEATURE_SOUND) {
     Phaser.Sound = require('sound');
 }
 

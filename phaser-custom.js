@@ -40,6 +40,8 @@ var Phaser = {
         Graphics: require('gameobjects/graphics/Graphics.js'),
         Image: require('gameobjects/image/Image'),
         Layer: require('gameobjects/layer/Layer'),
+        Container: require('gameobjects/container/Container'), // 添加Container
+        Group: require('gameobjects/group/Group'), // 添加Group
         Particles: require('gameobjects/particles'), // 添加粒子系统
         Sprite: require('gameobjects/sprite/Sprite'),
         Text: require('gameobjects/text/Text'),
@@ -49,6 +51,8 @@ var Phaser = {
             Graphics: require('gameobjects/graphics/GraphicsFactory'),
             Image: require('gameobjects/image/ImageFactory'),
             Layer: require('gameobjects/layer/LayerFactory'),
+            Container: require('gameobjects/container/ContainerFactory'), // 添加Container
+            Group: require('gameobjects/group/GroupFactory'), // 添加Group
             Particles: require('gameobjects/particles/ParticleManagerFactory'), // 添加粒子系统
             Sprite: require('gameobjects/sprite/SpriteFactory'),
             Text: require('gameobjects/text/TextFactory'),
@@ -59,6 +63,8 @@ var Phaser = {
             Graphics: require('gameobjects/graphics/GraphicsCreator'),
             Image: require('gameobjects/image/ImageCreator'),
             Layer: require('gameobjects/layer/LayerCreator'),
+            Container: require('gameobjects/container/ContainerCreator'), // 添加Container
+            Group: require('gameobjects/group/GroupCreator'), // 添加Group
             Particles: require('gameobjects/particles/ParticleManagerCreator'), // 添加粒子系统
             Sprite: require('gameobjects/sprite/SpriteCreator'),
             Text: require('gameobjects/text/TextCreator'),

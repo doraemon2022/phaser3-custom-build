@@ -21,6 +21,7 @@ var Phaser = {
     Cameras: {Scene2D: require('cameras/2d')},
     Core: require('core'),
     Class: require('utils/Class'),
+    Curves: require('curves'), // 添加曲线
     Data: require('data'),
     Display: {Masks: require('display/mask')},
     DOM: require('dom'),

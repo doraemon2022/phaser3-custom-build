@@ -49,6 +49,8 @@ var Phaser = {
         Text: require('gameobjects/text/Text'),
         BitmapText: require('gameobjects/bitmaptext/static/BitmapText'), // 添加BitmapText
         DynamicBitmapText: require("gameobjects/bitmaptext/dynamic/DynamicBitmapText"), // 添加DynamicBitmapText
+        Shape: require('gameobjects/shape/Shape'), // 添加Shape
+        Rectangle: require('gameobjects/shape/rectangle/Rectangle'), // 添加Rectangle
         Factories: {
             Graphics: require('gameobjects/graphics/GraphicsFactory'),
             Image: require('gameobjects/image/ImageFactory'),
@@ -60,6 +62,7 @@ var Phaser = {
             Text: require('gameobjects/text/TextFactory'),
             BitmapText: require('gameobjects/bitmaptext/static/BitmapTextFactory'), // 添加BitmapTextFactory
             DynamicBitmapText: require("gameobjects/bitmaptext/dynamic/DynamicBitmapTextFactory"), // 添加DynamicBitmapTextFactory
+            Rectangle: require('gameobjects/shape/rectangle/RectangleFactory'), // 添加RectangleFactory
         },
         Creators: {
             Graphics: require('gameobjects/graphics/GraphicsCreator'),

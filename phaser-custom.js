@@ -15,6 +15,7 @@ var Extend = require('utils/object/Extend');
 
 var Phaser = {
 
+    Actions: require('actions'), // 添加Actions
     Animations: require('animations'),
     BlendModes: require('renderer/BlendModes'),
     Cache: require('cache'),
@@ -47,8 +48,8 @@ var Phaser = {
         Particles: require('gameobjects/particles'), // 添加粒子系统
         Sprite: require('gameobjects/sprite/Sprite'),
         Text: require('gameobjects/text/Text'),
-        BitmapText: require('gameobjects/bitmaptext/static/BitmapText'), // 添加BitmapText
-        DynamicBitmapText: require("gameobjects/bitmaptext/dynamic/DynamicBitmapText"), // 添加DynamicBitmapText
+        // BitmapText: require('gameobjects/bitmaptext/static/BitmapText'), // 添加BitmapText
+        // DynamicBitmapText: require("gameobjects/bitmaptext/dynamic/DynamicBitmapText"), // 添加DynamicBitmapText
         Shape: require('gameobjects/shape/Shape'), // 添加Shape
         Rectangle: require('gameobjects/shape/rectangle/Rectangle'), // 添加Rectangle
         Factories: {
@@ -60,8 +61,8 @@ var Phaser = {
             Particles: require('gameobjects/particles/ParticleManagerFactory'), // 添加粒子系统
             Sprite: require('gameobjects/sprite/SpriteFactory'),
             Text: require('gameobjects/text/TextFactory'),
-            BitmapText: require('gameobjects/bitmaptext/static/BitmapTextFactory'), // 添加BitmapTextFactory
-            DynamicBitmapText: require("gameobjects/bitmaptext/dynamic/DynamicBitmapTextFactory"), // 添加DynamicBitmapTextFactory
+            // BitmapText: require('gameobjects/bitmaptext/static/BitmapTextFactory'), // 添加BitmapTextFactory
+            // DynamicBitmapText: require("gameobjects/bitmaptext/dynamic/DynamicBitmapTextFactory"), // 添加DynamicBitmapTextFactory
             Rectangle: require('gameobjects/shape/rectangle/RectangleFactory'), // 添加RectangleFactory
         },
         Creators: {
@@ -73,8 +74,8 @@ var Phaser = {
             Particles: require('gameobjects/particles/ParticleManagerCreator'), // 添加粒子系统
             Sprite: require('gameobjects/sprite/SpriteCreator'),
             Text: require('gameobjects/text/TextCreator'),
-            BitmapText: require('gameobjects/bitmaptext/static/BitmapTextCreator'), // 添加BitmapTextCreator
-            DynamicBitmapText: require("gameobjects/bitmaptext/dynamic/DynamicBitmapTextCreator"), // 添加DynamicBitmapTextCreator
+            // BitmapText: require('gameobjects/bitmaptext/static/BitmapTextCreator'), // 添加BitmapTextCreator
+            // DynamicBitmapText: require("gameobjects/bitmaptext/dynamic/DynamicBitmapTextCreator"), // 添加DynamicBitmapTextCreator
         }
     },
     Geom: {
@@ -107,7 +108,7 @@ var Phaser = {
             TextFile: require('loader/filetypes/TextFile'),
             XMLFile: require('loader/filetypes/XMLFile'),
             PackFile: require("loader/filetypes/PackFile"), // 添加load.pack
-            BitmapFontFile: require('loader/filetypes/BitmapFontFile'), // 添加BitmapFont
+            // BitmapFontFile: require('loader/filetypes/BitmapFontFile'), // 添加BitmapFont
         },
         File: require('loader/File'),
         FileTypesManager: require('loader/FileTypesManager'),
